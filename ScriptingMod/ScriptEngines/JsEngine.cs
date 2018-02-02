@@ -37,6 +37,7 @@ namespace ScriptingMod.ScriptEngines
             _jint.SetValue("console", new JsConsole());
             _jint.SetValue("require", new Action<object>(Require));
             _jint.SetValue("importAssembly", new Action<string>(ImportAssembly));
+            _jint.SetValue("stdlib", new StdLib());
         }
 
         protected override void ExecuteFile(string filePath)
